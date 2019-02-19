@@ -1,0 +1,22 @@
+{
+    "name": "mission4/simple-gmail",
+    "version": "1.0.0",
+    "description": "Simple Gmail Package for Laravel",
+    "type": "package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "phppirate",
+            "email": "sam@podlogar.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6",
+        "google/apiclient": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mission4\\SimpleGmail\\": "src/"
+        }
+    }
+}
