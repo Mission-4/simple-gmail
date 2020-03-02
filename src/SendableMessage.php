@@ -3,8 +3,10 @@
 namespace Mission4\SimpleGmail;
 
 use Swift_Message;
+use Swift_Attachment;
 use Google_Service_Gmail;
 use Google_Service_Gmail_Message;
+use Illuminate\Http\UploadedFile;
 
 class SendableMessage
 {
@@ -29,6 +31,17 @@ class SendableMessage
     public function cc($cc = [])
     {
         $this->message->setCc($cc);
+        return $this;
+    }
+
+    public function attachFile(UploadedFile $file)
+    {
+        $attachment = (new Swift_Attachment())
+            ->setFilename($file->getClientOriginalName())
+            ->setContentType($file->getClientMimeType())
+            ->setBody($file->get());
+
+        $this->message->attach($attachment);
         return $this;
     }
 
