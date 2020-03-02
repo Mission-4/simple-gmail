@@ -1,6 +1,6 @@
 {
     "name": "mission4/simple-gmail",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Simple Gmail Package for Laravel",
     "type": "package",
     "license": "MIT",
